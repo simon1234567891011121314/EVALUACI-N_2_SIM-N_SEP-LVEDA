@@ -19,4 +19,4 @@ class ArriendoAdmin(admin.ModelAdmin):
 
     @admin.display(description = "Precio", ordering = "precio")
     def formato(self, obj):
-        return f"{obj.precio:,}".replace("," , ".")
+        return f"${obj.precio:,}".replace("," , ".")
